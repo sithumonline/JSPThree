@@ -55,7 +55,8 @@ public class XyzServlet extends HttpServlet {
         String password = request.getParameter("password");
         boolean status = XyzController.logIn(username, password);
         if (!status) {
-            location = "../login-fail.jsp";
+            location = "../index.jsp";
+            request.setAttribute("alert","Wrong User Name or Password");
         }
         RequestDispatcher dispatcher = request.getRequestDispatcher(location);
         dispatcher.forward(request, response);
