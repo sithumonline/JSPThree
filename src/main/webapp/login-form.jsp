@@ -2,29 +2,7 @@
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
-<head>
-    <title>User Management Application</title>
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
-</head>
-<body>
-
-<header>
-    <nav class="navbar navbar-expand-md navbar-dark"
-         style="background-color: tomato">
-        <div>
-            <a href="https://sithum.online" class="navbar-brand"> User Management App </a>
-        </div>
-
-        <ul class="navbar-nav">
-            <li><a href="<%=request.getContextPath()%>/user/list"
-                   class="nav-link">Users</a></li>
-        </ul>
-    </nav>
-</header>
-<br>
+<jsp:include page="header.jsp"></jsp:include>
 <div class="container col-md-5">
     <div class="card">
         <div class="card-body">
@@ -36,27 +14,27 @@
                     </h2>
                 </caption>
 
-                <fieldset class="form-group">
-                    <label>User Name</label> <input type="text"
-                                                    value="<c:out value='${user.username}' />" class="form-control"
+                <div class="relative mb-4">
+                    <label class="leading-7 text-sm text-gray-600">User Name</label> <input type="text"
+                                                    value="<c:out value='${user.username}' />" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                                                     name="username" required="required">
-                </fieldset>
+                </div>
 
-                <fieldset class="form-group">
-                    <label>User Password</label> <input type="password"
+                <div class="relative mb-4">
+                    <label class="leading-7 text-sm text-gray-600">User Password</label> <input type="password"
                                                         value="<c:out value='${user.password}' />"
-                                                        class="form-control"
+                                                        class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                                                         name="password" required="required">
-                </fieldset>
+                </div>
 
-                <button type="submit" class="btn btn-success">Log In</button>
+                <button type="submit" class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Log In</button>
                 <a href="<%=request.getContextPath()%>/user/new"
                    class="nav-link">
-                    <button type="button" class="btn btn-success">Create Account</button>
+                    <button type="button" class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Create Account</button>
                 </a>
             </form>
         </div>
     </div>
 </div>
-</body>
+<jsp:include page="footer.jsp"></jsp:include>
 </html>

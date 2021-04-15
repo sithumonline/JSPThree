@@ -2,84 +2,71 @@
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
-<head>
-    <title>Book Management Application</title>
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
-</head>
-<body>
-
-<header>
-    <nav class="navbar navbar-expand-md navbar-dark"
-         style="background-color: tomato">
-        <div>
-            <a href="https://sithum.online" class="navbar-brand"> Book Management App </a>
-        </div>
-
-        <ul class="navbar-nav">
-            <li><a href="<%=request.getContextPath()%>/book/list"
-                   class="nav-link">Books</a></li>
-        </ul>
-    </nav>
-</header>
-<br>
-<div class="container col-md-5">
-    <div class="card">
-        <div class="card-body">
-            <c:if test="${book != null}">
+<jsp:include page="header.jsp"></jsp:include>
+<section class="text-gray-600 body-font relative">
+    <div class="absolute inset-0 bg-gray-300">
+        <iframe style="filter: grayscale(1) contrast(1.2) opacity(0.4);" marginheight="0" marginwidth="0" title="map"
+                scrolling="no"
+                src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+                width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+    <div class="container px-5 py-24 mx-auto flex">
+        <div class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
+            <c:if test="${user != null}">
             <form action="update" method="post">
                 </c:if>
-                <c:if test="${book == null}">
+                <c:if test="${user == null}">
                 <form action="insert" method="post">
                     </c:if>
-
-                    <caption>
-                        <h2>
-                            <c:if test="${book != null}">
-                                Edit Book
-                            </c:if>
-                            <c:if test="${book == null}">
-                                Add New Book
-                            </c:if>
-                        </h2>
-                    </caption>
-
+                    <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">
+                        <c:if test="${book != null}">
+                            Edit Book
+                        </c:if>
+                        <c:if test="${book == null}">
+                            Add New Book
+                        </c:if>
+                    </h2>
                     <c:if test="${book != null}">
                         <input type="hidden" name="id" value="<c:out value='${book.book_id}' />"/>
                     </c:if>
 
-                    <fieldset class="form-group">
-                        <label>Username</label> <input type="text"
-                                                        value="<c:out value='${book.username}' />" class="form-control"
-                                                        name="username" required="required">
-                    </fieldset>
+                    <div class="relative mb-4">
+                        <label class="leading-7 text-sm text-gray-600">Username</label> <input type="text"
+                                                                                               value="<c:out value='${book.username}' />"
+                                                                                               class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                                                                               name="username"
+                                                                                               required="required">
+                    </div>
 
-                    <fieldset class="form-group">
-                        <label>Train</label> <input type="text"
-                                                            value="<c:out value='${book.train}' />"
-                                                            class="form-control"
-                                                            name="train" required="required">
-                    </fieldset>
+                    <div class="relative mb-4">
+                        <label class="leading-7 text-sm text-gray-600">Train</label> <input type="text"
+                                                                                            value="<c:out value='${book.train}' />"
+                                                                                            class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                                                                            name="train"
+                                                                                            required="required">
+                    </div>
 
-                    <fieldset class="form-group">
-                        <label>Station</label> <input type="text"
-                                                             value="<c:out value='${book.station}' />"
-                                                             class="form-control"
-                                                             name="station">
-                    </fieldset>
+                    <div class="relative mb-4">
+                        <label class="leading-7 text-sm text-gray-600">Station</label> <input type="text"
+                                                                                              value="<c:out value='${book.station}' />"
+                                                                                              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                                                                              name="station">
+                    </div>
 
-                    <fieldset class="form-group">
-                        <label>Time</label> <input type="text"
-                                                         value="<c:out value='${book.time}' />" class="form-control"
-                                                         name="time">
-                    </fieldset>
+                    <div class="relative mb-4">
+                        <label class="leading-7 text-sm text-gray-600">Time</label> <input type="text"
+                                                                                           value="<c:out value='${book.time}' />"
+                                                                                           class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                                                                           name="time">
+                    </div>
 
-                    <button type="submit" class="btn btn-success">Save</button>
+                    <button type="submit"
+                            class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                        Save
+                    </button>
                 </form>
         </div>
     </div>
-</div>
-</body>
+</section>
+<jsp:include page="footer.jsp"></jsp:include>
 </html>
