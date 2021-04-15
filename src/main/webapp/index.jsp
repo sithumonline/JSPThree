@@ -35,7 +35,7 @@
                     Log In
                 </button>
                 <a href="<%=request.getContextPath()%>/user/new"
-                   class="self-center text-indigo-500 bg-white border-0 py-2 px-8 focus:outline-none rounded text-lg">
+                   class="self-center text-indigo-500 bg-white border-0 py-2 px-8 border-t-8 focus:outline-none rounded text-lg">
                     Create Account
                 </a>
                 <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>
