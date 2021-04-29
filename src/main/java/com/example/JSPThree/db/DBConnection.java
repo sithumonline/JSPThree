@@ -7,7 +7,7 @@ public class DBConnection {
     private static DBConnection dbConnection;
 
     private DBConnection() {
-        String dbURL = "jdbc:mysql://j00m1j6dxadx6k85:yokek3gbz6dgeuih@klbcedmmqp7w17ik.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/qef640yn8wl5y9su";
+        String dbURL = "jdbc:mysql://j00m1j6dxadx6k85:yokek3gbz6dgeuih@klbcedmmqp7w17ik.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/qef640yn8wl5y9su?autoReconnect=true&tcpKeepAlive=true&interactiveClient=true";
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
