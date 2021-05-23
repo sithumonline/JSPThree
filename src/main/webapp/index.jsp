@@ -18,10 +18,8 @@
     <form action="xyz/login" method="post">
         <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
             <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
-                <h1 class="title-font font-medium text-3xl text-gray-900">Slow-carb next level shoindcgoitch ethical
-                    authentic, poko scenester</h1>
-                <p class="leading-relaxed mt-4">Poke slow-carb mixtape knausgaard, typewriter street art gentrify
-                    hammock starladder roathse. Craies vegan tousled etsy austin.</p>
+                <h1 class="title-font font-medium text-3xl text-gray-900">“ Nexter “ which is an online train reservation system is a complete web-based solution designed to manage train bookings</h1>
+                <p class="leading-relaxed mt-4">since it was a tough job to book train tickets. Earlier a person had to face so much difficulties in order to place a reservation such as standing in long queues and waiting for long hours. But with the advancement of technology reserving trains via internet has helped in reducing the long queues and saving time.</p>
             </div>
             <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
                 <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Log In</h2>
