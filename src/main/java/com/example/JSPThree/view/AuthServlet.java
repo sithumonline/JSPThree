@@ -1,6 +1,6 @@
 package com.example.JSPThree.view;
 
-import com.example.JSPThree.controller.XyzController;
+import com.example.JSPThree.controller.AuthController;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet("/xyz/*")
-public class XyzServlet extends HttpServlet {
+@WebServlet("/auth/*")
+public class AuthServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -46,7 +46,7 @@ public class XyzServlet extends HttpServlet {
         String location = "../book-list.jsp";
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        boolean status = XyzController.logIn(username, password);
+        boolean status = AuthController.logIn(username, password);
         if (!status) {
             location = "../index.jsp";
             request.setAttribute("alert", "Wrong User Name or Password");

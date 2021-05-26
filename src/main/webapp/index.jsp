@@ -15,7 +15,7 @@
     </script>
 </c:if>
 <section class="text-gray-600 body-font">
-    <form action="xyz/login" method="post">
+    <form action="auth/login" method="post">
         <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
             <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
                 <h1 class="title-font font-medium text-3xl text-gray-900">“ Nexter “ which is an online train reservation system is a complete web-based solution designed to manage train bookings</h1>

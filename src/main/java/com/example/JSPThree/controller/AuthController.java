@@ -5,7 +5,7 @@ import com.example.JSPThree.model.User;
 
 import java.sql.*;
 
-public class XyzController {
+public class AuthController {
     public static boolean logIn(String username, String userpass) throws SQLException {
         User user = null;
         String sql = "SELECT password FROM users WHERE username='" + username + "'";
