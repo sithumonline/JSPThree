@@ -9,7 +9,7 @@ import java.util.List;
 
 public class StationController {
     public static int addStation(Station stations) throws SQLException {
-        String sql = "INSERT INTO stations (stationname, province, geography_type, block_type) VALUES ('" + stations.getStationname() + "','" + stations.getProvince() + "','" + stations.getBbb() + "','" + stations.getBlockType() + "')";
+        String sql = "INSERT INTO stations (stationname, province, geography_type, block_type) VALUES ('" + stations.getStationname() + "','" + stations.getProvince() + "','" + stations.getGeographyType() + "','" + stations.getBlockType() + "')";
         DBConnection conn = DBConnection.getDBConnection();
         Connection stm = conn.getConnection();
         PreparedStatement runSql = stm.prepareStatement(sql);
@@ -25,7 +25,7 @@ public class StationController {
     }
 
     public static int updateStation(Station stations) throws SQLException {
-        String sql = "UPDATE stations SET stationname='" + stations.getStationname() + "', province='" + stations.getProvince() + "', geography_type='" + stations.getBbb() + "', block_type='" + stations.getBlockType() + "' WHERE station_id='" + stations.getStation_id() + "'";
+        String sql = "UPDATE stations SET stationname='" + stations.getStationname() + "', province='" + stations.getProvince() + "', geography_type='" + stations.getGeographyType() + "', block_type='" + stations.getBlockType() + "' WHERE station_id='" + stations.getStation_id() + "'";
         DBConnection conn = DBConnection.getDBConnection();
         Connection stm = conn.getConnection();
         PreparedStatement runSql = stm.prepareStatement(sql);

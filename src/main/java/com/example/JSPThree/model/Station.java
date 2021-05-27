@@ -38,7 +38,7 @@ public class Station {
         return province;
     }
 
-    public String getBbb() {
+    public String getGeographyType() {
         return geographyType;
     }
 
