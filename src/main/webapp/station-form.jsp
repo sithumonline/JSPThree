@@ -39,7 +39,7 @@
                     </div>
 
                     <div class="relative mb-4">
-                        <label class="leading-7 text-sm text-gray-600">Station Abb</label> <input type="text"
+                        <label class="leading-7 text-sm text-gray-600">Station Province</label> <input type="text"
                                                                                                   value="<c:out value='${station.province}' />"
                                                                                                   class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                                                                                                   name="province"
@@ -47,15 +47,15 @@
                     </div>
 
                     <div class="relative mb-4">
-                        <label class="leading-7 text-sm text-gray-600">Station Bbb</label> <input type="text"
-                                                                                                  value="<c:out value='${station.geography_type}' />"
+                        <label class="leading-7 text-sm text-gray-600">Station Geography Type</label> <input type="text"
+                                                                                                  value="<c:out value='${station.geographyType}' />"
                                                                                                   class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                                                                                                   name="geography_type">
                     </div>
 
                     <div class="relative mb-4">
-                        <label class="leading-7 text-sm text-gray-600">Station Ccc</label> <input type="text"
-                                                                                                  value="<c:out value='${station.block_type}' />"
+                        <label class="leading-7 text-sm text-gray-600">Station Block Type</label> <input type="text"
+                                                                                                  value="<c:out value='${station.blockType}' />"
                                                                                                   class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                                                                                                   name="block_type">
                     </div>
