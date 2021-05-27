@@ -86,10 +86,10 @@ public class StationServlet extends HttpServlet {
     public static void insertStation(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException {
         String stationname = request.getParameter("stationname");
-        String aaa = request.getParameter("aaa");
-        String bbb = request.getParameter("bbb");
-        String ccc = request.getParameter("ccc");
-        Station newStation = new Station(stationname, aaa, bbb, ccc);
+        String province = request.getParameter("province");
+        String geography_type = request.getParameter("geography_type");
+        String block_type = request.getParameter("block_type");
+        Station newStation = new Station(stationname, province, geography_type, block_type);
         StationController.addStation(newStation);
         response.sendRedirect("list");
     }
@@ -98,10 +98,10 @@ public class StationServlet extends HttpServlet {
             throws SQLException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         String stationname = request.getParameter("stationname");
-        String aaa = request.getParameter("aaa");
-        String bbb = request.getParameter("bbb");
-        String ccc = request.getParameter("ccc");
-        Station station = new Station(id, stationname, aaa, bbb, ccc);
+        String province = request.getParameter("province");
+        String geography_type = request.getParameter("geography_type");
+        String block_type = request.getParameter("block_type");
+        Station station = new Station(id, stationname, province, geography_type, block_type);
         StationController.updateStation(station);
         response.sendRedirect("list");
     }

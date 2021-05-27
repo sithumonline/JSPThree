@@ -19,9 +19,9 @@ create table trains (
 create table stations (
  station_id	int(11) NOT NULL AUTO_INCREMENT,
  stationname	varchar(45) NOT NULL,
- aaa	varchar(45) NOT NULL,
- bbb	varchar(45) NOT NULL,
- ccc	varchar(45) NOT NULL,
+ province	varchar(45) NOT NULL,
+ geography_type	varchar(45) NOT NULL,
+ block_type	varchar(45) NOT NULL,
  PRIMARY KEY (station_id)
 );
 

@@ -9,7 +9,7 @@ import java.util.List;
 
 public class StationController {
     public static int addStation(Station stations) throws SQLException {
-        String sql = "INSERT INTO stations (stationname, aaa, bbb, ccc) VALUES ('" + stations.getStationname() + "','" + stations.getAaa() + "','" + stations.getBbb() + "','" + stations.getCcc() + "')";
+        String sql = "INSERT INTO stations (stationname, province, geography_type, block_type) VALUES ('" + stations.getStationname() + "','" + stations.getProvince() + "','" + stations.getBbb() + "','" + stations.getBlockType() + "')";
         DBConnection conn = DBConnection.getDBConnection();
         Connection stm = conn.getConnection();
         PreparedStatement runSql = stm.prepareStatement(sql);
@@ -25,7 +25,7 @@ public class StationController {
     }
 
     public static int updateStation(Station stations) throws SQLException {
-        String sql = "UPDATE stations SET stationname='" + stations.getStationname() + "', aaa='" + stations.getAaa() + "', bbb='" + stations.getBbb() + "', ccc='" + stations.getCcc() + "' WHERE station_id='" + stations.getStation_id() + "'";
+        String sql = "UPDATE stations SET stationname='" + stations.getStationname() + "', province='" + stations.getProvince() + "', geography_type='" + stations.getBbb() + "', block_type='" + stations.getBlockType() + "' WHERE station_id='" + stations.getStation_id() + "'";
         DBConnection conn = DBConnection.getDBConnection();
         Connection stm = conn.getConnection();
         PreparedStatement runSql = stm.prepareStatement(sql);
@@ -34,7 +34,7 @@ public class StationController {
 
     public static Station selectStation(int id) throws SQLException {
         Station station = null;
-        String sql = "SELECT station_id, stationname, aaa, bbb, ccc FROM stations WHERE station_id='" + id + "'";
+        String sql = "SELECT station_id, stationname, province, geography_type, block_type FROM stations WHERE station_id='" + id + "'";
         Statement st;
         ResultSet rs;
 
@@ -42,7 +42,7 @@ public class StationController {
             st = DBConnection.getDBConnection().getCreateStatement();
             rs = st.executeQuery(sql);
             while (rs.next()) {
-                station = new Station(rs.getInt("station_id"), rs.getString("stationname"), rs.getString("aaa"), rs.getString("bbb"), rs.getString("ccc"));
+                station = new Station(rs.getInt("station_id"), rs.getString("stationname"), rs.getString("province"), rs.getString("geography_type"), rs.getString("block_type"));
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -62,7 +62,7 @@ public class StationController {
             rs = st.executeQuery(sql);
             Station station;
             while (rs.next()) {
-                station = new Station(rs.getInt("station_id"), rs.getString("stationname"), rs.getString("aaa"), rs.getString("bbb"), rs.getString("ccc"));
+                station = new Station(rs.getInt("station_id"), rs.getString("stationname"), rs.getString("province"), rs.getString("geography_type"), rs.getString("block_type"));
                 stationList.add(station);
             }
         } catch (Exception e) {

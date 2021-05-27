@@ -40,24 +40,24 @@
 
                     <div class="relative mb-4">
                         <label class="leading-7 text-sm text-gray-600">Station Abb</label> <input type="text"
-                                                                                                  value="<c:out value='${station.aaa}' />"
+                                                                                                  value="<c:out value='${station.province}' />"
                                                                                                   class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                                                                                                  name="aaa"
+                                                                                                  name="province"
                                                                                                   required="required">
                     </div>
 
                     <div class="relative mb-4">
                         <label class="leading-7 text-sm text-gray-600">Station Bbb</label> <input type="text"
-                                                                                                  value="<c:out value='${station.bbb}' />"
+                                                                                                  value="<c:out value='${station.geography_type}' />"
                                                                                                   class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                                                                                                  name="bbb">
+                                                                                                  name="geography_type">
                     </div>
 
                     <div class="relative mb-4">
                         <label class="leading-7 text-sm text-gray-600">Station Ccc</label> <input type="text"
-                                                                                                  value="<c:out value='${station.ccc}' />"
+                                                                                                  value="<c:out value='${station.block_type}' />"
                                                                                                   class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                                                                                                  name="ccc">
+                                                                                                  name="block_type">
                     </div>
 
                     <button type="submit"

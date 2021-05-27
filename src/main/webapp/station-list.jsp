@@ -34,9 +34,9 @@
                     <tr>
                         <td class="border-t-2 border-gray-200 px-4 py-3"><c:out value="${station.station_id}"/></td>
                         <td class="border-t-2 border-gray-200 px-4 py-3"><c:out value="${station.stationname}"/></td>
-                        <td class="border-t-2 border-gray-200 px-4 py-3"><c:out value="${station.aaa}"/></td>
-                        <td class="border-t-2 border-gray-200 px-4 py-3"><c:out value="${station.bbb}"/></td>
-                        <td class="border-t-2 border-gray-200 px-4 py-3"><c:out value="${station.ccc}"/></td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3"><c:out value="${station.province}"/></td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3"><c:out value="${station.geography_type}"/></td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3"><c:out value="${station.block_type}"/></td>
                         <td class="border-t-2 border-gray-200 px-4 py-3"><a
                                 href="<%=request.getContextPath()%>/station/edit?id=<c:out value='${station.station_id}' />">Edit</a>
                             &nbsp;&nbsp;&nbsp;&nbsp; <a

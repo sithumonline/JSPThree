@@ -4,23 +4,23 @@ public class Station {
 
     private int station_id;
     private String stationname;
-    private String aaa;
-    private String bbbb;
-    private String ccc;
+    private String province;
+    private String geographyType;
+    private String blockType;
 
-    public Station(int station_id, String stationname, String aaa, String bbbb, String ccc) {
+    public Station(int station_id, String stationname, String province, String geographyType, String blockType) {
         this.station_id = station_id;
         this.stationname = stationname;
-        this.aaa = aaa;
-        this.bbbb = bbbb;
-        this.ccc = ccc;
+        this.province = province;
+        this.geographyType = geographyType;
+        this.blockType = blockType;
     }
 
-    public Station(String stationname, String aaa, String bbbb, String ccc) {
+    public Station(String stationname, String province, String geographyType, String blockType) {
         this.stationname = stationname;
-        this.aaa = aaa;
-        this.bbbb = bbbb;
-        this.ccc = ccc;
+        this.province = province;
+        this.geographyType = geographyType;
+        this.blockType = blockType;
     }
 
     public Station() {
@@ -34,15 +34,15 @@ public class Station {
         return stationname;
     }
 
-    public String getAaa() {
-        return aaa;
+    public String getProvince() {
+        return province;
     }
 
     public String getBbb() {
-        return bbbb;
+        return geographyType;
     }
 
-    public String getCcc() {
-        return ccc;
+    public String getBlockType() {
+        return blockType;
     }
 }
